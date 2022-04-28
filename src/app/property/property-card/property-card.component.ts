@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Iproperty } from "../iProperty.interface";
 
 @Component(
   {
@@ -11,11 +12,13 @@ import { Component } from "@angular/core";
   }
 )
 export class PropertyCardComponent{
-property:any={
 
-  "id":1,
-  "Name":"Birla House",
-  "Type":"House",
-  "Price":12000
-}
+  @Input() property:Iproperty | undefined ;
+// property:any={
+
+//   "id":1,
+//   "Name":"Birla House",
+//   "Type":"House",
+//   "Price":12000
+// }
 }

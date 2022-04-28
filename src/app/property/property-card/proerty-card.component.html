@@ -1,13 +1,22 @@
-<div class="row">
-  <div class="shadow-lg col-sm-4 p-3">
   <div class="card">
-    <img class="propimage" src="assets/image/house_default.png">
+    <div class="img-wrapper">
+    <img *ngIf="property?.Image" class="propimage" src="assets/image/{{property?.Image}}.png">
+    <img *ngIf="!property?.Image" class="propimage" src="assets/image/download.jpg">
+
+    <ul class="list-inline member-icons">
+      <li class="list-inline-item text-center">
+        <button class="btn btn-primary" routerLink="/property-details/{{property?.Id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+      </li >
+      <li class="list-inline-item text-center">
+        <button class="btn btn-primary"><i class="fa-solid fa-id-badge"></i></button>
+      </li>
+    </ul>
+  </div>
     <div class="card-body p-2">
-<h1> {{property.Name}}</h1>
-<h2> {{property.Type}}</h2>
-<h3> {{property.Price}}</h3>
-</div>
-</div>
-</div>
-</div>
+      <h1> {{property?.Name1}}</h1>
+      <h2> {{property?.Type}}</h2>
+      <h3> {{property?.Price}}</h3>
+    </div>
+  </div>
+
 
